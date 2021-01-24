@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'git-api';
+  userName: string;
+  getUserName(userName: string){
+    this.userName = userName;
+  }
 }
