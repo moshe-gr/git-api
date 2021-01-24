@@ -5,4 +5,5 @@ export interface GitInfo {
     email: string;
     followers: number;
     following: number;
+    created_at: string;
 }

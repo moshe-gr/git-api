@@ -1,17 +1,24 @@
 <main class="container-fluid">
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mb-3" style="max-width: 740px;">
         <div class="row g-0">
         <div class="col-md-4">
-            <img src="..." alt="Users profile pic">
+            <img src="{{info.avatar_url}}" width="200px" alt="Users profile pic">
             <figcaption>{{info.name}}</figcaption>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-4">
+            Location: {{info.location}}<br>
+            Email: {{info.email}}<br>
+            Followers: {{info.followers}}<br>
+            Following: {{info.following}}<br>
+            Joind at: {{info.created_at}}
+        </div>
+        <aside class="col-md-4">
             <div class="card-body">
             <h5 class="card-title">Git user</h5>
             <p class="card-text">This is a card with git user information using git api.</p>
             <p class="card-text"><small class="text-muted">sample project using API</small></p>
             </div>
-        </div>
+        </aside>
         </div>
     </div>
 </main>
