@@ -10,7 +10,7 @@ export class GitApiService {
   private gitApi = 'https://api.github.com/users/';
 
   constructor(private httpClient: HttpClient) { }
-  
+
   get(userName: string): Observable<any>{
      return this.httpClient.get(`${this.gitApi}${userName}`);
   }

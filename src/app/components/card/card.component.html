@@ -1,16 +1,16 @@
 <main class="container-fluid">
-    <div class="card mb-3" style="max-width: 740px;">
+    <div class="card mb-3 border-primary" style="max-width: 740px;">
         <div class="row g-0">
         <div class="col-md-4">
-            <img src="{{info.avatar_url}}" width="200px" alt="Users profile pic">
+            <img src="{{info.avatar_url}}" class="w-50" alt="Users profile pic">
             <figcaption>{{info.name}}</figcaption>
         </div>
         <div class="col-md-4">
-            Location: {{info.location}}<br>
-            Email: {{info.email}}<br>
-            Followers: {{info.followers}}<br>
-            Following: {{info.following}}<br>
-            Joind at: {{info.created_at}}
+            <div *ngIf="info.location"><span class="font-weight-bold">Location:</span> {{info.location}}</div>
+            <div><span class="font-weight-bold">Followers:</span> {{info.followers}}</div>
+            <div><span class="font-weight-bold">Following:</span> {{info.following}}</div>
+            <div><span class="font-weight-bold">Joind at:</span> {{info.created_at | date: "dd/MM/yy"}}</div>
+            <div class="border border-warning rounded mb-2"><h4 class="text-center">Bio</h4><span *ngIf="info.bio">{{info.bio}}</span></div>  
         </div>
         <aside class="col-md-4">
             <div class="card-body">
